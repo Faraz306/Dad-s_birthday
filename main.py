@@ -1,3 +1,4 @@
+from streamlit_confetti import confetti
 import streamlit as st
 from streamlit_extras.let_it_rain import rain
 
@@ -22,3 +23,11 @@ st.success("🎂 Happy birthday to you, Happy birthday to you, Happy Birthday to
 # Maximum Particle Decorations!
 st.balloons()    # Floating native balloons
 rain("🥳")       # Shower of falling emojis
+
+# This shoots falling birthday emojis over the whole screen
+rain(
+    emoji="🎂",
+    font_size=54,       # Adjust size of the birthday cakes
+    falling_speed=4,    # Speed of the animation
+    animation_length="short" # "short" bursts once, "infinite" keeps raining
+)
